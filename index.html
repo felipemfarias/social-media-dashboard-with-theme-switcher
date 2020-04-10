@@ -19,49 +19,221 @@
   <body>
     <div class="main">
       <div class="header">
-        <h1 class="title">
-          Social Media Dashboard
-        </h1>
-        <div class="follower-count">
-          Total Followers: 23,004
+        <div>
+          <h1 class="title">
+            Social Media Dashboard
+          </h1>
+          <h4 class="follower-total">
+            Total Followers: 23,004
+          </h4>
         </div>
+
         <div class="dark-mode-toggle">Dark Mode <input type="checkbox" /></div>
       </div>
-      <div class="dashboard-container">
-        <div class="dashboard-item">
-          @nathanf 1987 Followers 12 Today
+      <div class="dashboard">
+        <div class="card">
+          <div class="facebook"></div>
+          <div class="card-item username">
+            <div class="icon">
+              <img src="/images/icon-facebook.svg" alt="Facebook" />
+            </div>
+            @nathanf
+          </div>
+          <div class="card-item follower-count">1987</div>
+          <div class="card-item follower-label">Followers</div>
+          <div class="card-item follower-today">12 Today</div>
         </div>
-        <div class="dashboard-item">@nathanf 1044 Followers 99 Today</div>
-        <div class="dashboard-item">@realnathanf 11k Followers 1099 Today</div>
-        <div class="dashboard-item">Nathan F. 8239 Subscribers 144 Today</div>
+
+        <div class="card">
+          <div class="twitter"></div>
+          <div class="card-item username">
+            <div class="icon">
+              <img src="/images/icon-twitter.svg" alt="Twitter" />
+            </div>
+            @nathanf
+          </div>
+          <div class="card-item follower-count">1044</div>
+          <div class="card-item follower-label">Followers</div>
+          <div class="card-item follower-today">99 Today</div>
+        </div>
+
+        <div class="card">
+          <div class="instagram"></div>
+          <div class="card-item username">
+            <div class="icon">
+              <img src="/images/icon-instagram.svg" alt="Instagram" />
+            </div>
+            @realnathanf
+          </div>
+          <div class="card-item follower-count">11k</div>
+          <div class="card-item follower-label">Followers</div>
+          <div class="card-item follower-today">1099 Today</div>
+        </div>
+
+        <div class="card">
+          <div class="youtube"></div>
+          <div class="card-item username">
+            <div class="icon">
+              <img src="/images/icon-youtube.svg" alt="YouTube" />
+            </div>
+            Nathan F.
+          </div>
+          <div class="card-item follower-count">8239</div>
+          <div class="card-item follower-label">Subscribers</div>
+          <div class="card-item follower-today">144 Today</div>
+        </div>
       </div>
-      <div class="overview-container">
-        <h2 class="header">
-          Overview - Today
-        </h2>
-        <div class="item">
-          Page Views 87 3%
+      <h2 class="overview-header">
+        Overview - Today
+      </h2>
+
+      <div class="overview">
+        <div class="card">
+          <div class="row">
+            <div class="item overview-label">
+              Page Views
+            </div>
+            <div class="item overview-icon">
+              <img src="/images/icon-facebook.svg" alt="Facebook" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="item overview-view-count">
+              87
+            </div>
+            <div class="item overview-kpi increase">
+              3%
+            </div>
+          </div>
         </div>
-        <div class="item">
-          Likes 52 2%
+        <div class="card">
+          <div class="row">
+            <div class="item overview-label">
+              Likes
+            </div>
+            <div class="item overview-icon">
+              <img src="/images/icon-facebook.svg" alt="Facebook" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="item overview-view-count">
+              52
+            </div>
+            <div class="item overview-kpi decrease">
+              2%
+            </div>
+          </div>
         </div>
-        <div class="item">
-          Likes 5462 2257%
+
+        <div class="card">
+          <div class="row">
+            <div class="item overview-label">
+              Likes
+            </div>
+            <div class="item overview-icon">
+              <img src="/images/icon-instagram.svg" alt="Facebook" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="item overview-view-count">
+              5462
+            </div>
+            <div class="item overview-kpi increase">
+              2257%
+            </div>
+          </div>
         </div>
-        <div class="item">
-          Profile Views 52k 1375%
+        <div class="card">
+          <div class="row">
+            <div class="item overview-label">
+              Profile Views
+            </div>
+            <div class="item overview-icon">
+              <img src="/images/icon-instagram.svg" alt="Facebook" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="item overview-view-count">
+              52k
+            </div>
+            <div class="item overview-kpi increase">
+              1275%
+            </div>
+          </div>
         </div>
-        <div class="item">
-          Retweets 117 303%
+
+        <div class="card">
+          <div class="row">
+            <div class="item overview-label">
+              Retweets
+            </div>
+            <div class="item overview-icon">
+              <img src="/images/icon-twitter.svg" alt="Facebook" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="item overview-view-count">
+              117
+            </div>
+            <div class="item overview-kpi increase">
+              303%
+            </div>
+          </div>
         </div>
-        <div class="item">
-          Likes 507 553%
+        <div class="card">
+          <div class="row">
+            <div class="item overview-label">
+              Likes
+            </div>
+            <div class="item overview-icon">
+              <img src="/images/icon-twitter.svg" alt="Facebook" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="item overview-view-count">
+              507
+            </div>
+            <div class="item overview-kpi increase">
+              553%
+            </div>
+          </div>
         </div>
-        <div class="item">
-          Likes 107 19%
+
+        <div class="card">
+          <div class="row">
+            <div class="item overview-label">
+              Likes
+            </div>
+            <div class="item overview-icon">
+              <img src="/images/icon-youtube.svg" alt="Facebook" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="item overview-view-count">
+              107
+            </div>
+            <div class="item overview-kpi decrease">
+              19%
+            </div>
+          </div>
         </div>
-        <div class="item">
-          Total Views 1407 12%
+        <div class="card">
+          <div class="row">
+            <div class="item overview-label">
+              Total Views
+            </div>
+            <div class="item overview-icon">
+              <img src="/images/icon-youtube.svg" alt="Facebook" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="item overview-view-count">
+              1407
+            </div>
+            <div class="item overview-kpi decrease">
+              12%
+            </div>
+          </div>
         </div>
       </div>
     </div>
