@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
 body {
-  background-color: #fff;
+  background-color: hsl(0, 0%, 100%);
   text-align: center;
   width: 100%;
   font-family: "Inter", sans-serif;
@@ -9,20 +9,52 @@ body {
   color: hsl(230, 17%, 14%);
 }
 
+body.dark {
+  background-color: hsl(230, 17%, 14%);
+  color: hsl(0, 0%, 100%);
+}
+
+.top {
+  height: 250px;
+  background: hsl(225, 100%, 98%);
+}
+
+.dark .top {
+  height: 250px;
+  background: hsl(232, 19%, 15%);
+}
+
 .main {
+  max-width: 1440px;
+  margin: auto;
+  padding: 32px;
   text-align: left;
-  margin: 0 5%;
+  margin-top: -250px;
 }
 
 .header {
   margin-top: 32px;
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
 }
 
-.title,
+.header-divider {
+  display: none;
+}
+
+.title h1,
 .follower-total {
   margin: 0;
+}
+
+.follower-total {
+  color: hsl(228, 12%, 44%);
+}
+
+.dark .follower-total {
+  color: hsl(228, 34%, 66%);
 }
 
 .dashboard {
@@ -41,10 +73,10 @@ body {
   width: 100%;
   color: hsl(228, 12%, 44%);
 }
-@media (min-width: 600px) {
-  .card {
-    width: 300px;
-  }
+
+.dark .card {
+  background-color: hsl(228, 28%, 20%);
+  color: hsl(228, 34%, 66%);
 }
 
 .card-item {
@@ -63,6 +95,10 @@ body {
   font-size: 48px;
   font-weight: 700;
   color: hsl(230, 17%, 14%);
+}
+
+.dark .follower-count {
+  color: hsl(0, 0%, 100%);
 }
 
 .follower-label {
@@ -134,7 +170,12 @@ body {
   padding: 16px 0;
 }
 
-.overview .card .row {
+.overview .row {
+  width: 100%;
+  margin: 0;
+}
+
+.card-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -151,6 +192,10 @@ body {
   color: hsl(230, 17%, 14%);
 }
 
+.dark .overview-view-count {
+  color: hsl(0, 0%, 100%);
+}
+
 .overview-icon {
   margin: 0;
   height: 24px;
@@ -162,11 +207,30 @@ body {
 }
 
 .increase {
+  display: flex;
+  align-items: flex-start;
   color: hsl(163, 72%, 41%);
+}
+.increase .arrow {
+  height: 0;
+  width: 0;
+  border: 5px solid transparent;
+  border-bottom-color: hsl(163, 72%, 41%);
+  margin-right: 4px;
 }
 
 .decrease {
+  display: flex;
+  align-items: flex-end;
   color: hsl(356, 69%, 56%);
+}
+
+.decrease .arrow {
+  height: 0;
+  width: 0;
+  border: 5px solid transparent;
+  border-top-color: hsl(356, 69%, 56%);
+  margin-right: 4px;
 }
 
 .attribution {
@@ -175,4 +239,14 @@ body {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 600px) {
+  .card {
+    width: 300px;
+  }
+
+  .header {
+    flex-direction: row;
+  }
 }
