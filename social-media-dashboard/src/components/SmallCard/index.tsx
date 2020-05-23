@@ -1,5 +1,6 @@
 import React from "react";
 import useStyles from "./styles";
+import { useTheme } from "react-jss";
 
 type SmallCardProps = {
   label: string;
@@ -14,7 +15,8 @@ const SmallCard = ({
   viewCount,
   viewsToday,
 }: SmallCardProps) => {
-  const classes = useStyles();
+  const theme = useTheme();
+  const classes = useStyles({ theme });
   const iconPath = require(`../../assets/images/icon-${socialMedia}.svg`);
   return (
     <div className={classes.smallCard}>

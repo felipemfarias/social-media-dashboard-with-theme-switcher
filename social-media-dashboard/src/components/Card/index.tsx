@@ -1,5 +1,6 @@
 import React from "react";
 import useStyles from "./styles";
+import { useTheme } from "react-jss";
 
 type CardProps = {
   userId: string;
@@ -14,7 +15,8 @@ const Card = ({
   followerCount,
   followerToday,
 }: CardProps) => {
-  const classes = useStyles();
+  const theme = useTheme();
+  const classes = useStyles({ theme });
   const iconPath = require(`../../assets/images/icon-${socialMedia}.svg`);
 
   const GetCardDecoration = (socialMedia: string) => {

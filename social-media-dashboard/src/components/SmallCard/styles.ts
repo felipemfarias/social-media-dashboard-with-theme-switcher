@@ -2,13 +2,13 @@ import { createUseStyles } from "react-jss";
 
 const useStyles = createUseStyles({
   smallCard: {
-    backgroundColor: "hsl(227, 47%, 96%)",
+    backgroundColor: ({ theme }: any) => theme.card.background,
     borderRadius: "4px",
     textAlign: "center",
     padding: "1em 0",
     margin: "16px 0",
     width: "100%",
-    color: "hsl(228, 12%, 44%)",
+    color: ({ theme }: any) => theme.card.primaryText,
     "@media (min-width: 600px)": {
       width: "300px",
     },
@@ -29,7 +29,7 @@ const useStyles = createUseStyles({
   viewCount: {
     fontSize: "2em",
     fontWeight: 700,
-    color: "hsl(230, 17%, 14%)",
+    color: ({ theme }: any) => theme.card.secondaryText,
   },
   viewsToday: {
     fontSize: "0.75",

@@ -1,17 +1,24 @@
-import React from "react";
-import useStyles from "./styles";
-import Header from "./components/Header";
-import Dashboard from "./components/Dashboard";
-import Overview from "./components/Overview";
+import React, { useState } from "react";
+import Main from "./components/Main";
+
+import { ThemeProvider } from "react-jss";
+import { lightTheme, darkTheme } from "./themes";
 
 const App = () => {
-  const classes = useStyles();
+  const [theme, setTheme] = useState("dark");
+
+  const ChangeTheme = () => {
+    if (theme === "light") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  };
+
   return (
-    <div className={classes.main}>
-      <Header />
-      <Dashboard />
-      <Overview />
-    </div>
+    <ThemeProvider theme={theme === "dark" ? darkTheme : lightTheme}>
+      <Main themeSwitcher={ChangeTheme} />
+    </ThemeProvider>
   );
 };
 

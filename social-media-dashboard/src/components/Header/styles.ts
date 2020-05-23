@@ -17,6 +17,7 @@ const useStyles = createUseStyles({
   },
   followers: {
     fontWeight: "bold",
+    color: ({ theme }: any) => theme.textSecondary,
   },
   darkModeToggle: {
     cursor: "pointer",

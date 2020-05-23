@@ -2,17 +2,18 @@ import { createUseStyles } from "react-jss";
 
 const useStyles = createUseStyles({
   card: {
-    backgroundColor: "hsl(227, 47%, 96%)",
+    backgroundColor: ({ theme }: any) => theme.card.background,
     borderRadius: "4px",
     textAlign: "center",
     padding: 0,
     margin: "16px 0",
     width: "100%",
-    color: "hsl(228, 12%, 44%)",
+    color: ({ theme }: any) => theme.card.primaryText,
     "@media (min-width: 600px)": {
       width: "300px",
     },
   },
+
   topDecoration: {
     height: "3px",
     borderTopLeftRadius: "4px",
@@ -59,7 +60,7 @@ const useStyles = createUseStyles({
     extend: "cardItem",
     fontSize: "3em",
     fontWeight: 700,
-    color: "hsl(230, 17%, 14%)",
+    color: ({ theme }: any) => theme.card.secondaryText,
   },
   followerLabel: {
     extend: "cardItem",
