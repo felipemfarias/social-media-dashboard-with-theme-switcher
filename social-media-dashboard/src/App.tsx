@@ -17,7 +17,7 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme === "dark" ? darkTheme : lightTheme}>
-      <Main themeSwitcher={ChangeTheme} />
+      <Main currentTheme={theme} themeSwitcher={ChangeTheme} />
     </ThemeProvider>
   );
 };

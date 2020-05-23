@@ -7,28 +7,32 @@ const Dashboard = () => {
   return (
     <section className={classes.dashboard}>
       <Card
-        userId="@felipemfarias"
+        userId="@nathanf"
         socialMedia="facebook"
-        followerCount={323}
+        followerCount={1987}
         followerToday={12}
+        followerRate="up"
       />
       <Card
-        userId="@felipemfarias"
+        userId="@nathanf"
         socialMedia="twitter"
-        followerCount={323}
-        followerToday={12}
+        followerCount={1044}
+        followerToday={99}
+        followerRate="up"
       />
       <Card
-        userId="@felipemfarias"
+        userId="@realnathanf"
         socialMedia="instagram"
-        followerCount={323}
-        followerToday={12}
+        followerCount={11000}
+        followerToday={1099}
+        followerRate="up"
       />
       <Card
-        userId="@felipemfarias"
+        userId="Nathan F."
         socialMedia="youtube"
-        followerCount={323}
-        followerToday={12}
+        followerCount={8239}
+        followerToday={144}
+        followerRate="down"
       />
     </section>
   );

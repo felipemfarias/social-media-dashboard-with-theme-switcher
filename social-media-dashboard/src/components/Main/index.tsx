@@ -6,12 +6,12 @@ import Footer from "../Footer";
 import useStyles from "./styles";
 import { useTheme } from "react-jss";
 
-const Main = ({ themeSwitcher }: any) => {
+const Main = ({ themeSwitcher, currentTheme }: any) => {
   const theme = useTheme();
   const classes = useStyles({ theme });
   return (
     <div className={classes.main}>
-      <Header themeSwitcher={themeSwitcher} />
+      <Header currentTheme={currentTheme} themeSwitcher={themeSwitcher} />
       <Dashboard />
       <Overview />
       <Footer />

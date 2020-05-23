@@ -7,6 +7,7 @@ type CardProps = {
   socialMedia: "facebook" | "twitter" | "instagram" | "youtube";
   followerCount: number;
   followerToday: number;
+  followerRate: "up" | "down";
 };
 
 const Card = ({
@@ -14,10 +15,13 @@ const Card = ({
   socialMedia,
   followerCount,
   followerToday,
+  followerRate,
 }: CardProps) => {
   const theme = useTheme();
   const classes = useStyles({ theme });
   const iconPath = require(`../../assets/images/icon-${socialMedia}.svg`);
+  const arrowUp = require(`../../assets/images/icon-up.svg`);
+  const arrowDown = require(`../../assets/images/icon-down.svg`);
 
   const GetCardDecoration = (socialMedia: string) => {
     switch (socialMedia) {
@@ -45,8 +49,18 @@ const Card = ({
       <div className={classes.followerCount}>{followerCount}</div>
       <div className={classes.followerLabel}>Followers</div>
       <div className={classes.followerToday}>
-        <div className="increase">
-          <span className="arrow"></span>
+        <div
+          className={
+            followerRate === "up" ? classes.increase : classes.decrease
+          }
+        >
+          <span>
+            <img
+              className={classes.arrow}
+              alt=""
+              src={followerRate === "up" ? arrowUp : arrowDown}
+            />
+          </span>
           {followerToday} Today
         </div>
       </div>

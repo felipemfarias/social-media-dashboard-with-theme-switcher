@@ -1,8 +1,9 @@
 import React from "react";
 import useStyles from "./styles";
 import { useTheme } from "react-jss";
+import Switch from "./switch";
 
-const Header = ({ themeSwitcher }: any) => {
+const Header = ({ themeSwitcher, currentTheme }: any) => {
   const theme = useTheme();
   const classes = useStyles({ theme });
   return (
@@ -12,7 +13,8 @@ const Header = ({ themeSwitcher }: any) => {
         <div className={classes.followers}>Total Followers: 23,004</div>
       </div>
       <div className={classes.darkModeToggle} onClick={themeSwitcher}>
-        Change theme
+        <div className={classes.themeSwitcherLabel}>Toggle theme</div>
+        <Switch currentTheme={currentTheme} />
       </div>
     </div>
   );

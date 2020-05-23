@@ -35,6 +35,15 @@ const useStyles = createUseStyles({
     fontSize: "0.75",
     fontWeight: 700,
   },
+  increase: {
+    color: "hsl(163, 72%, 41%)",
+  },
+  decrease: {
+    color: "hsl(356, 69%, 56%)",
+  },
+  arrow: {
+    padding: "4px",
+  },
 });
 
 export default useStyles;
